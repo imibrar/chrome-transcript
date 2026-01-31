@@ -1,0 +1,74 @@
+/* Panel styles (injected into shadow DOM) */
+
+:host {
+  /* Light theme (default) */
+  --bg-color: #ffffff;
+  --header-bg: #f9f9f9;
+  --header-hover: #f1f1f1;
+  --subtle-bg: #f5f5f5;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --active-bg: rgba(62, 166, 255, 0.1);
+  --border-color: #e0e0e0;
+  --text-color: #0f0f0f;
+  --muted-text: #606060;
+  --active-text: #065fd4;
+  --accent-color: #065fd4;
+  --accent-hover: #0556bf;
+  --accent-bg: rgba(6, 95, 212, 0.1);
+  --error-color: #cc0000;
+  --error-bg: rgba(204, 0, 0, 0.1);
+}
+
+:host(.dark) {
+  /* Dark theme */
+  --bg-color: #212121;
+  --header-bg: #282828;
+  --header-hover: #303030;
+  --subtle-bg: #1a1a1a;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --active-bg: rgba(62, 166, 255, 0.15);
+  --border-color: #3f3f3f;
+  --text-color: #f1f1f1;
+  --muted-text: #aaaaaa;
+  --active-text: #3ea6ff;
+  --accent-color: #3ea6ff;
+  --accent-hover: #5ab3ff;
+  --accent-bg: rgba(62, 166, 255, 0.15);
+  --error-color: #ff4444;
+  --error-bg: rgba(255, 68, 68, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-text);
+}
+
+/* App container */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+  background: var(--bg-color);
+}

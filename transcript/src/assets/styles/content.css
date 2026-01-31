@@ -1,0 +1,7 @@
+/* This file is injected into YouTube pages */
+/* Most styles are in shadow DOM, this is just for the container */
+
+#yt-english-practice-container {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  line-height: 1.5;
+}

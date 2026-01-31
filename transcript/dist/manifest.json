@@ -17,20 +17,35 @@
     "https://www.youtube.com/*"
   ],
   "background": {
-    "service_worker": "src/background/service-worker.ts",
+    "service_worker": "service-worker-loader.js",
     "type": "module"
   },
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
-      "js": ["src/content/index.ts"],
-      "run_at": "document_idle"
+      "js": [
+        "assets/content-D1the7jw.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "run_at": "document_idle",
+      "css": [
+        "assets/content-dQWOMObz.css"
+      ]
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["src/content/*", "src/components/*", "src/assets/*"],
-      "matches": ["https://www.youtube.com/*"]
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "resources": [
+        "src/content/*",
+        "src/components/*",
+        "src/assets/*",
+        "assets/content-D1the7jw.js"
+      ],
+      "use_dynamic_url": false
     }
   ]
 }

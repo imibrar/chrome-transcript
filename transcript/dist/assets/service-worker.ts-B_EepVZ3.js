@@ -1,0 +1,1 @@
+chrome.runtime.onInstalled.addListener(e=>{e.reason==="install"?console.log("YouTube English Practice extension installed"):e.reason==="update"&&console.log("YouTube English Practice extension updated")});chrome.runtime.onMessage.addListener((e,s,n)=>(e.type==="GET_VIDEO_INFO"&&n({success:!0}),!0));
